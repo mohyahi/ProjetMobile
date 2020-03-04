@@ -10,7 +10,7 @@ data class Patient (
     var prenom : String,
     var adresse : String,
     @PrimaryKey
-    var phone : Int,
+    var phone : String,
     var password : String,
     var newpassword: String
     )

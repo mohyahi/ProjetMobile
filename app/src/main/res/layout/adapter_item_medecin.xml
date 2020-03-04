@@ -4,146 +4,122 @@
     android:layout_height="match_parent">
 
     <RelativeLayout
-        android:layout_marginTop="15dp"
-        android:layout_marginLeft="15dp"
         android:layout_width="wrap_content"
-        android:layout_height="wrap_content">
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="15dp"
+        android:layout_marginTop="15dp">
 
         <ImageView
             android:id="@+id/image"
             android:layout_width="80dp"
             android:layout_height="80dp"
-            android:src="@drawable/avatar4"
-            ></ImageView>
+            android:src="@drawable/avatar4"></ImageView>
 
         <TextView
             android:id="@+id/nom_txt"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Nom : "
-            android:textSize="20dp"
+            android:layout_marginLeft="10dp"
             android:layout_toRightOf="@+id/image"
-            android:layout_marginLeft="10dp"></TextView>
+            android:text="Nom : "
+            android:textSize="20dp"></TextView>
 
         <TextView
             android:id="@+id/item_nom"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:layout_toRightOf="@+id/nom_txt"
             android:text="nom du medecin"
-            android:textSize="20dp"
-            android:layout_toRightOf="@+id/nom_txt"></TextView>
+            android:textSize="20dp"></TextView>
 
-        <TextView
-            android:id="@+id/prenom_txt"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="Preom : "
-            android:textSize="20dp"
-            android:layout_below="@+id/nom_txt"
-            android:layout_toRightOf="@+id/image"
-            android:layout_marginLeft="10dp"></TextView>
 
-        <TextView
-            android:id="@+id/item_prenom"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:textSize="20dp"
-            android:text="prenom du medecin"
-            android:layout_below="@+id/item_nom"
-            android:layout_toRightOf="@+id/prenom_txt"
-            ></TextView>
 
         <TextView
             android:id="@+id/specialite_txt"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Spécialité : "
-            android:textSize="20dp"
-            android:layout_below="@+id/prenom_txt"
+            android:layout_below="@+id/nom_txt"
+            android:layout_marginLeft="10dp"
             android:layout_toRightOf="@+id/image"
-            android:layout_marginLeft="10dp"></TextView>
+            android:text="Spécialité : "
+            android:textSize="20dp"></TextView>
 
         <TextView
             android:id="@+id/item_specialite"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:textSize="20dp"
-            android:text="specialite du medecin"
-            android:layout_below="@+id/item_prenom"
+            android:layout_below="@+id/item_nom"
             android:layout_toRightOf="@+id/specialite_txt"
-            ></TextView>
+            android:text="specialite du medecin"
+            android:textSize="20dp"></TextView>
 
         <TextView
             android:id="@+id/adresse_txt"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:layout_below="@+id/image"
             android:text="Adresse : "
-            android:textSize="20dp"
-            android:layout_below="@+id/image"></TextView>
+            android:textSize="20dp"></TextView>
 
         <TextView
             android:id="@+id/item_adresse"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:textSize="20dp"
-            android:text="adresse du medecin"
             android:layout_below="@+id/image"
             android:layout_toRightOf="@+id/adresse_txt"
-            ></TextView>
+            android:text="adresse du medecin"
+            android:textSize="20dp"></TextView>
 
         <TextView
             android:id="@+id/ouv_txt"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:layout_below="@+id/adresse_txt"
             android:text="Heure d'ouverture : "
-            android:textSize="20dp"
-            android:layout_below="@+id/adresse_txt"></TextView>
+            android:textSize="20dp"></TextView>
 
         <TextView
             android:id="@+id/item_heure_ouverture"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:textSize="20dp"
-            android:text="heure d'ouverture du medecin"
             android:layout_below="@+id/item_adresse"
             android:layout_toRightOf="@+id/ouv_txt"
-            ></TextView>
+            android:text="heure d'ouverture du medecin"
+            android:textSize="20dp"></TextView>
 
         <TextView
             android:id="@+id/fer_txt"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:layout_below="@+id/ouv_txt"
             android:text="Heure de fermeture : "
-            android:textSize="20dp"
-            android:layout_below="@+id/ouv_txt"></TextView>
+            android:textSize="20dp"></TextView>
 
         <TextView
             android:id="@+id/item_heure_fermeture"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:textSize="20dp"
-            android:text="heure de fermeture du medecin"
             android:layout_below="@+id/item_heure_ouverture"
             android:layout_toRightOf="@+id/fer_txt"
-            ></TextView>
+            android:text="heure de fermeture du medecin"
+            android:textSize="20dp"></TextView>
 
         <TextView
             android:id="@+id/tel_txt"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:layout_below="@+id/fer_txt"
             android:text="Numéro de téléphone : "
-            android:textSize="20dp"
-            android:layout_below="@+id/fer_txt"></TextView>
+            android:textSize="20dp"></TextView>
 
         <TextView
             android:id="@+id/item_num_tel"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:textSize="20dp"
-            android:text="Numero de telephone du medecin"
             android:layout_below="@+id/item_heure_fermeture"
             android:layout_toRightOf="@+id/tel_txt"
-            ></TextView>
+            android:text="Numero de telephone du medecin"
+            android:textSize="20dp"></TextView>
 
 
     </RelativeLayout>

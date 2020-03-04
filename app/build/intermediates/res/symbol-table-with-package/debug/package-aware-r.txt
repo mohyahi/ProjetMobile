@@ -803,7 +803,6 @@ id item_heure_fermeture
 id item_heure_ouverture
 id item_nom
 id item_num_tel
-id item_prenom
 id item_specialite
 id left
 id line1

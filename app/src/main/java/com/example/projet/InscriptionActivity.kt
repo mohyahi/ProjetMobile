@@ -32,17 +32,21 @@ class InscriptionActivity : AppCompatActivity() {
                 val nom = findViewById<EditText>(R.id.nom_txt).text.toString()
                 var prenom = findViewById<EditText>(R.id.prenom_txt).text.toString()
                 var adresse = findViewById<EditText>(R.id.adresse_txt).text.toString()
-                var phone = findViewById<EditText>(R.id.tel_txt).text.toString().toInt()
+                var phone = findViewById<EditText>(R.id.tel_txt).text.toString()
+
+                val STRING_LENGTH = 10
+                val charPool : List<Char> = ('a'..'z') + ('A'..'Z') + ('0'..'9')
+                val pwdp = (1..STRING_LENGTH)
+                    .map { i -> kotlin.random.Random.nextInt(0, charPool.size) }
+                    .map(charPool::get)
+                    .joinToString("")
+
+                val pat = Patient(nss,nom,prenom,adresse,phone,pwdp,"0")
+
+                addpatient(pat)
+                sendSMS(pat)
 
 
-
-
-
-
-                val pat = Patient(nss,nom,prenom,adresse,phone,"AAA","AA")
-
-
-                addpatient(Patient(nss,nom,prenom,adresse,phone,"AAA","AA"))
             }
         }
 
@@ -54,7 +58,8 @@ class InscriptionActivity : AppCompatActivity() {
                 if(response?.isSuccessful!!){
                     val list = response?.body()!!
 
-                        Toast.makeText(this@InscriptionActivity,p.Nom,Toast.LENGTH_SHORT).show()
+                        Toast.makeText(this@InscriptionActivity,"Votre compte est bien crée, vous receverez un SMS contenant votre mot de passe",Toast.LENGTH_SHORT).show()
+
 
                 }
                 else {
@@ -70,5 +75,31 @@ class InscriptionActivity : AppCompatActivity() {
         })
 
 
+    }
+
+
+    private  fun sendSMS(patient : Patient){
+        val call = Retrofitservice.endpoint.sendSMS(patient)
+
+        call.enqueue(object: Callback<String> {
+            override fun onResponse(call: Call<String>, response: Response<String>) {
+                if(response?.isSuccessful!!){
+                    val str:String? = response.body()
+
+                }
+                else
+                {
+                    Toast.makeText(
+                        this@InscriptionActivity,
+                        "err",
+                        Toast.LENGTH_SHORT
+                    ).show()
+                }
+            }
+
+            override fun onFailure(call: Call<String>, t: Throwable) {
+                Toast.makeText(this@InscriptionActivity, "errreur",Toast.LENGTH_SHORT).show()
+            }
+        })
     }
 }
