@@ -18,15 +18,12 @@ class ConnexionActivity : AppCompatActivity() {
         setContentView(R.layout.connexion)
 
         connexion_btn.setOnClickListener {
-            if(num_tel_txt.text.toString().isEmpty() || password_txt.text.toString().isEmpty())
-            {
-                Toast.makeText(this, "Veuiller remplir les deux champs !", Toast.LENGTH_SHORT).show()
+            if (num_tel_txt.text.toString().isEmpty() || password_txt.text.toString().isEmpty()) {
+                Toast.makeText(this, "Veuiller remplir les deux champs !", Toast.LENGTH_SHORT)
+                    .show()
+            } else {
+                getPatientPhone(num_tel_txt.text.toString(), password_txt.text.toString())
             }
-            else {
-
-                        getPatientPhone(num_tel_txt.text.toString(), password_txt.text.toString())
-
-                            }
         }
     }
 

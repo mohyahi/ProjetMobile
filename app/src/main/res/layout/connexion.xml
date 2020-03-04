@@ -54,11 +54,13 @@
         style="@style/Widget.AppCompat.Button.Borderless"
         android:layout_width="214dp"
         android:layout_height="36dp"
+        android:layout_marginBottom="252dp"
         android:background="@color/colorPrimary"
         android:text="Se connecter"
         android:textColor="@android:color/background_light"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.502"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/password_txt" />
 

@@ -872,6 +872,7 @@ id standard
 id start
 id submenuarrow
 id submit_area
+id switch_med
 id tabMode
 id tag_accessibility_actions
 id tag_accessibility_clickable_spans
