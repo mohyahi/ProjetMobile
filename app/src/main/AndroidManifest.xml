@@ -16,6 +16,8 @@
         <activity android:name=".ConfirmPasswordActivity"></activity>
         <activity android:name=".listMedecinActivity"></activity>
         <activity android:name=".RechercheMedecinActivity"></activity>
+        <activity android:name=".AccueilActivity"></activity>
+        <activity android:name=".AjoutTraitantActivity"></activity>
         <activity android:name=".MainActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />

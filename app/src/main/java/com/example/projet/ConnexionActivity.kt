@@ -29,6 +29,7 @@ class ConnexionActivity : AppCompatActivity() {
 
     fun   getPatientPhone(tlfn:String, pwd : String) {
         val intent = Intent(this, ConfirmPasswordActivity::class.java)
+        val intent2 = Intent(this, AccueilActivity::class.java)
         val call = Retrofitservice.endpoint.getPatientPhone(tlfn,pwd)
         call.enqueue(object : Callback<List<Patient>> {
             override fun onResponse(
@@ -45,7 +46,8 @@ class ConnexionActivity : AppCompatActivity() {
                         intent.putExtra("phonePat",phonePat)
                     startActivity(intent)}
                     else {
-                        Toast.makeText(this@ConnexionActivity, "Accueil", Toast.LENGTH_SHORT).show()
+                        startActivity(intent2)
+                        //Toast.makeText(this@ConnexionActivity, "Accueil", Toast.LENGTH_SHORT).show()
                         //On met l'interface du patient
                     }
                 }

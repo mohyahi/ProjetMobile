@@ -54,6 +54,7 @@
         style="@style/Widget.AppCompat.Button.Borderless"
         android:layout_width="214dp"
         android:layout_height="36dp"
+        android:layout_marginTop="88dp"
         android:layout_marginBottom="252dp"
         android:background="@color/colorPrimary"
         android:text="Se connecter"

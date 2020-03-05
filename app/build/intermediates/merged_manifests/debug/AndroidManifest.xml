@@ -25,6 +25,8 @@
         <activity android:name="com.example.projet.ConfirmPasswordActivity" />
         <activity android:name="com.example.projet.listMedecinActivity" />
         <activity android:name="com.example.projet.RechercheMedecinActivity" />
+        <activity android:name="com.example.projet.AccueilActivity" />
+        <activity android:name="com.example.projet.AjoutTraitantActivity" />
         <activity android:name="com.example.projet.MainActivity" >
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />

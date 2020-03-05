@@ -8,7 +8,7 @@
     tools:context=".RechercheMedecinActivity">
 
     <TextView
-        android:id="@+id/recherche_txt"
+        android:id="@+id/text"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="16dp"
@@ -32,7 +32,7 @@
         android:textColor="@color/colorPrimary"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/recherche_txt" />
+        app:layout_constraintTop_toBottomOf="@+id/ajout_trait_txt" />
 
     <EditText
         android:id="@+id/commune_txt"

@@ -745,6 +745,10 @@ id actions
 id activity_chooser_view_content
 id add
 id adresse_txt
+id affich_trait_btn
+id ajout_trait_txt
+id ajout_traitant_btn
+id ajouter_trait_btn
 id alertTitle
 id always
 id async
@@ -830,12 +834,12 @@ id parent
 id parentPanel
 id password_txt
 id percent
+id phone_trait_txt
 id prenom_txt
 id progress_circular
 id progress_horizontal
 id radio
 id recherche_btn
-id recherche_txt
 id rechercher_medecin_btn
 id right
 id right_icon
@@ -872,7 +876,6 @@ id standard
 id start
 id submenuarrow
 id submit_area
-id switch_med
 id tabMode
 id tag_accessibility_actions
 id tag_accessibility_clickable_spans
@@ -941,8 +944,10 @@ layout abc_search_dropdown_item_icons_2line
 layout abc_search_view
 layout abc_select_dialog_material
 layout abc_tooltip
+layout accueil
 layout activity_main
 layout adapter_item_medecin
+layout ajout_medecin_trait
 layout confirm_password
 layout connexion
 layout custom_dialog
