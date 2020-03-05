@@ -22,11 +22,11 @@ class AjoutTraitantActivity : AppCompatActivity() {
                 Toast.makeText(this, "Veuillez remplir le champ !", Toast.LENGTH_SHORT).show()
             }
             else{
+                val phoneP = intent.getStringExtra("phonePat")
                 val date: String = SimpleDateFormat("dd/MM/yyyy", Locale.getDefault()).format(Date())
-                val patient = "123"
                 val medecin = findViewById<EditText>(R.id.phone_trait_txt).text.toString()
                 val status = "pending"
-                val demande = Demandeajout(date,3,medecin,patient,status)
+                val demande = Demandeajout(date,1,medecin,phoneP,status)
                 addTrait(demande)
                 //Toast.makeText(this, "Votre demande a été enregisté! " +
                        // "Vous devez attendre la réponse du médecin", Toast.LENGTH_SHORT).show()

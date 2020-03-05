@@ -28,8 +28,8 @@ class ConnexionActivity : AppCompatActivity() {
     }
 
     fun   getPatientPhone(tlfn:String, pwd : String) {
-        val intent = Intent(this, ConfirmPasswordActivity::class.java)
-        val intent2 = Intent(this, AccueilActivity::class.java)
+        val intent = Intent(this@ConnexionActivity, ConfirmPasswordActivity::class.java)
+        val intent2 = Intent(this@ConnexionActivity, AccueilActivity::class.java)
         val call = Retrofitservice.endpoint.getPatientPhone(tlfn,pwd)
         call.enqueue(object : Callback<List<Patient>> {
             override fun onResponse(
@@ -41,11 +41,13 @@ class ConnexionActivity : AppCompatActivity() {
 
                 }
                 else {
+                    var phonePat = response?.body()!![0].phone
                     if (response?.body()!![0].newpassword=="0"){
-                        var phonePat = response?.body()!![0].phone
                         intent.putExtra("phonePat",phonePat)
-                    startActivity(intent)}
+                        startActivity(intent)}
                     else {
+                       /* val phone_p = response?.body()!![0].phone*/
+                        intent2.putExtra("phonePat",phonePat)
                         startActivity(intent2)
                         //Toast.makeText(this@ConnexionActivity, "Accueil", Toast.LENGTH_SHORT).show()
                         //On met l'interface du patient
@@ -55,7 +57,7 @@ class ConnexionActivity : AppCompatActivity() {
             }
 
             override fun onFailure(call: Call<List<Patient>>?, t: Throwable?) {
-                Toast.makeText(this@ConnexionActivity, "Veuillez verifier vos information", Toast.LENGTH_SHORT).show()
+                Toast.makeText(this@ConnexionActivity, "Erreur de connexion", Toast.LENGTH_SHORT).show()
             }
         })
 
