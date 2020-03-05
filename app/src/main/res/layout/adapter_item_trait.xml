@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <RelativeLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="15dp"
+        android:layout_marginTop="15dp">
+
+        <ImageView
+            android:id="@+id/image"
+            android:layout_width="80dp"
+            android:layout_height="80dp"
+            android:src="@drawable/avatar4"></ImageView>
+
+        <TextView
+            android:id="@+id/fullname_txt"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:layout_toRightOf="@+id/image"
+            android:text="Médecin traitant : "
+            android:textSize="20dp"></TextView>
+
+        <TextView
+            android:id="@+id/item_fullname"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_toRightOf="@+id/fullname_txt"
+            android:text="medecin"
+            android:textSize="20dp"></TextView>
+
+
+
+        <TextView
+            android:id="@+id/tel_txt"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/fullname_txt"
+            android:layout_marginTop="15dp"
+            android:layout_marginLeft="10dp"
+            android:layout_toRightOf="@+id/image"
+            android:text="Téléphone  : "
+            android:textSize="20dp"></TextView>
+
+        <TextView
+            android:id="@+id/item_tel"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/item_fullname"
+            android:layout_marginTop="15dp"
+            android:layout_toRightOf="@+id/tel_txt"
+            android:text="phone"
+            android:textSize="20dp"></TextView>
+
+        <TextView
+            android:id="@+id/adresse_txt"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/image"
+            android:text="Adresse : "
+            android:textSize="20dp"></TextView>
+
+        <TextView
+            android:id="@+id/item_adresse"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/image"
+            android:layout_toRightOf="@+id/adresse_txt"
+            android:text="adresse du medecin"
+            android:textSize="20dp"></TextView>
+
+
+
+
+    </RelativeLayout>
+
+</LinearLayout>
