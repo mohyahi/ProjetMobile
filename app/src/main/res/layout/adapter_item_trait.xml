@@ -38,7 +38,7 @@
             android:id="@+id/tel_txt"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_below="@+id/fullname_txt"
+            android:layout_below="@+id/item_fullname"
             android:layout_marginTop="15dp"
             android:layout_marginLeft="10dp"
             android:layout_toRightOf="@+id/image"
@@ -59,7 +59,7 @@
             android:id="@+id/adresse_txt"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_below="@+id/image"
+            android:layout_below="@+id/item_tel"
             android:text="Adresse : "
             android:textSize="20dp"></TextView>
 
@@ -67,7 +67,7 @@
             android:id="@+id/item_adresse"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_below="@+id/image"
+            android:layout_below="@+id/item_tel"
             android:layout_toRightOf="@+id/adresse_txt"
             android:text="adresse du medecin"
             android:textSize="20dp"></TextView>

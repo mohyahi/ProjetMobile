@@ -785,6 +785,7 @@ id expand_activities_button
 id expanded_menu
 id fer_txt
 id forever
+id fullname_txt
 id glide_custom_view_target_tag
 id gone
 id group_divider
@@ -803,11 +804,13 @@ id inscrire_btn
 id invisible
 id italic
 id item_adresse
+id item_fullname
 id item_heure_fermeture
 id item_heure_ouverture
 id item_nom
 id item_num_tel
 id item_specialite
+id item_tel
 id left
 id line1
 id line3
@@ -896,6 +899,7 @@ id titleDividerNoCustom
 id title_template
 id top
 id topPanel
+id trait_listview
 id unchecked
 id uniform
 id up
@@ -947,12 +951,14 @@ layout abc_tooltip
 layout accueil
 layout activity_main
 layout adapter_item_medecin
+layout adapter_item_trait
 layout ajout_medecin_trait
 layout confirm_password
 layout connexion
 layout custom_dialog
 layout insciption
 layout list_medecin
+layout list_traitants
 layout notification_action
 layout notification_action_tombstone
 layout notification_template_custom_big

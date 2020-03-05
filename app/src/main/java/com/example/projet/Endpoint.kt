@@ -26,6 +26,10 @@ fun setPwd(@Path("phone") isbn: String,@Path("password") isn:String):Call<String
 @POST("sendSMS")
 fun sendSMS(@Body patient: Patient) : Call<String>
 
-    @POST("addTrait")
-    fun addTrait(@Body demande: Demandeajout): Call<String>
+@POST("addTrait")
+fun addTrait(@Body demande: Demandeajout): Call<String>
+
+@GET("getListeTraitant/{phone}")
+fun getListeTraitant(@Path ("phone") isbn: String): Call<List<Medecin>>
+
 }
