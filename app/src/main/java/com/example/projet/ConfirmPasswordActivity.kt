@@ -1,5 +1,6 @@
 package com.example.projet
 
+import android.content.Intent
 import android.os.Bundle
 import android.util.Log
 import android.widget.Toast
@@ -10,12 +11,14 @@ import retrofit2.Callback
 import retrofit2.Response
 
 class ConfirmPasswordActivity : AppCompatActivity() {
+
     override fun onCreate(savedInstanceState: Bundle?) {
+        val phoneP = intent.getStringExtra("phonePat")
         super.onCreate(savedInstanceState)
         setContentView(R.layout.confirm_password)
 
-        val phoneP = intent.getStringExtra("phonePat")
-        Toast.makeText(this, phoneP, Toast.LENGTH_SHORT).show()
+
+
         valider_btn.setOnClickListener {
 
 
@@ -36,9 +39,13 @@ class ConfirmPasswordActivity : AppCompatActivity() {
     }
     fun setPwd(iis :String,i:String){
         val call = Retrofitservice.endpoint.setPwd(iis,i)
+        val phoneP = intent.getStringExtra("phonePat")
+        val intent2 = Intent(this@ConfirmPasswordActivity, AccueilActivity::class.java)
         call.enqueue(object : Callback<String> {
             override fun onResponse(call: Call<String>?, response: Response<String>?) {
                 Toast.makeText(this@ConfirmPasswordActivity,"Mot de passe modifié",Toast.LENGTH_SHORT).show()
+                intent2.putExtra("phonePat",phoneP)
+                startActivity(intent2)
 
             }
 

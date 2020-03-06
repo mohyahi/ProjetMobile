@@ -1,4 +1,4 @@
-#Thu Mar 05 16:47:32 CET 2020
+#Fri Mar 06 15:50:28 CET 2020
 base.0=C\:\\Users\\dell\\Desktop\\Projet TDM\\ProjetMobile\\app\\build\\intermediates\\dex\\debug\\mergeExtDexDebug\\out\\classes.dex
 path.1=classes.dex
 renamed.1=classes2.dex
